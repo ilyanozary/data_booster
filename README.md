@@ -1,4 +1,4 @@
-# 📌 databoostr
+# 📌 databooster
 
 **databooster** is a Python package designed for AI developers to automatically analyze and augment datasets when data is scarce. It supports both **image** and **text** augmentation techniques, making it an essential tool for machine learning projects requiring data balancing.
 
@@ -19,12 +19,12 @@
 
 ## 📦 Installation
 ```bash
-pip install databoostr  # (Future release)
+pip install databooster  # (Future release)
 ```
 For now, clone the repository:
 ```bash
-git clone https://github.com/your-username/databoostr.git
-cd databoostr
+git clone https://github.com/your-username/databooster.git
+cd databooster
 ```
 
 ---
@@ -33,10 +33,10 @@ cd databoostr
 
 ### **1. Import and Initialize**
 ```python
-from databoostr import DataBoostr
+from databooster import databooster
 
 # Create an instance for image augmentation
-augmentor = DataBoostr(dataset_path="path/to/images", mode="image")
+augmentor = databooster(dataset_path="path/to/images", mode="image")
 ```
 
 ### **2. Check Dataset Balance**
@@ -53,7 +53,7 @@ augmentor.auto_augment()  # Applies augmentation and saves images in the same di
 
 #### **For Text**
 ```python
-augmentor_text = DataBoostr(dataset_path="path/to/text", mode="text")
+augmentor_text = databooster(dataset_path="path/to/text", mode="text")
 augmentor_text.auto_augment()
 ```
 
@@ -61,8 +61,8 @@ augmentor_text.auto_augment()
 
 ## 📁 Project Structure
 ```
-databoostr/
-│── databoostr.py  # Main package module
+databooster/
+│── databooster.py  # Main package module
 │── utils.py  # Data analysis utilities
 │── image_augment.py  # Image augmentation methods
 │── text_augment.py  # Text augmentation methods
@@ -90,4 +90,4 @@ MIT License © 2025 Your Name
 ---
 
 ## 🌟 Show Your Support
-If you like **databoostr**, consider starring ⭐ the repository!
+If you like **databooster**, consider starring ⭐ the repository!
