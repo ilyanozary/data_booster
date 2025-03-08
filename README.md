@@ -1,76 +1,93 @@
-# Data-Booster 🚀
+# 📌 databoostr
 
-**Data-Booster** is an open-source Python library for simple and effective **data augmentation** in computer vision and NLP projects. Whether you're working on a prototype or a large-scale AI model, Data-Booster helps you generate diverse datasets and improve your model performance.
-
----
-
-## 🌟 Features
-- **Image Augmentation**: Rotate, crop, flip, adjust brightness, add noise, and more.
-- **Text Augmentation**: Synonym replacement, word shuffling, paraphrasing, and more.
-- **Framework Integration**: Compatible with TensorFlow, PyTorch, and Keras.
-- **Custom Plugins**: Add your own augmentation techniques easily.
-- **Scalable and Lightweight**: Works with both small and large datasets.
+**databoostr** is a Python package designed for AI developers to automatically analyze and augment datasets when data is scarce. It supports both **image** and **text** augmentation techniques, making it an essential tool for machine learning projects requiring data balancing.
 
 ---
 
-## 🛠 Installation
+## 🚀 Features
+- **Automatic Data Analysis**: Checks dataset distribution and identifies class imbalances.
+- **Image Augmentation**:
+  - Rotation (90°, 180°, 270°)
+  - Horizontal & Vertical Flipping
+  - Brightness Adjustment
+- **Text Augmentation**:
+  - Synonym Replacement
+  - Random Word Deletion
+- **Easy Integration**: Simple API for applying augmentations automatically.
 
-Install Data-Booster using pip:
+---
 
+## 📦 Installation
 ```bash
-pip install data-booster
+pip install databoostr  # (Future release)
+```
+For now, clone the repository:
+```bash
+git clone https://github.com/your-username/databoostr.git
+cd databoostr
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🛠 Usage
 
-### Example: Image Augmentation
-
+### **1. Import and Initialize**
 ```python
-from data_booster.image_augmentor import ImageAugmentor
+from databoostr import DataBoostr
 
-# Initialize the augmentor
-augmentor = ImageAugmentor()
-
-# Apply rotation to an image
-augmented_image = augmentor.apply_rotation("input_image.jpg", angle=45)
-augmented_image.save("output_image.jpg")
+# Create an instance for image augmentation
+augmentor = DataBoostr(dataset_path="path/to/images", mode="image")
 ```
 
----
-
-### Example: Text Augmentation
-
+### **2. Check Dataset Balance**
 ```python
-from data_booster.text_augmentor import TextAugmentor
+balance = augmentor.check_data_balance()
+print(balance)  # Output: {'class1': 120, 'class2': 80, 'class3': 50}
+```
 
-# Initialize the augmentor
-augmentor = TextAugmentor()
+### **3. Apply Augmentation**
+#### **For Images**
+```python
+augmentor.auto_augment()  # Applies augmentation and saves images in the same directory
+```
 
-# Replace words with synonyms
-augmented_text = augmentor.synonym_replacement("This is a great example!")
-print(augmented_text)
+#### **For Text**
+```python
+augmentor_text = DataBoostr(dataset_path="path/to/text", mode="text")
+augmentor_text.auto_augment()
 ```
 
 ---
 
-## 📜 License
+## 📁 Project Structure
+```
+databoostr/
+│── databoostr.py  # Main package module
+│── utils.py  # Data analysis utilities
+│── image_augment.py  # Image augmentation methods
+│── text_augment.py  # Text augmentation methods
+│── __init__.py
+```
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
+
+## 🎯 Roadmap
+- [ ] Add advanced augmentation techniques
+- [ ] Implement custom augmentation strategies
+- [ ] Publish on PyPI
+- [ ] Integrate with TensorFlow & PyTorch
 
 ---
 
 ## 🤝 Contributing
-
-We welcome contributions! Feel free to:
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes and submit a pull request.
+We welcome contributions! Feel free to fork the repository and submit a pull request.
 
 ---
 
-## 📧 Contact
+## 📜 License
+MIT License © 2025 Your Name
 
-For any questions, feel free to open an issue or reach out directly!
+---
 
+## 🌟 Show Your Support
+If you like **databoostr**, consider starring ⭐ the repository!
