@@ -1,6 +1,23 @@
+Metadata-Version: 2.1
+Name: databooster
+Version: 0.1.0
+Summary: A smart data augmentation tool for AI developers.
+Home-page: https://github.com/ilyanozary/data_booster
+Author: ilyanozary
+Author-email: ilyanozary.dynamic@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+Requires-Dist: nltk
+
 # 📌 databoostr
 
-**databooster** is a Python package designed for AI developers to automatically analyze and augment datasets when data is scarce. It supports both **image** and **text** augmentation techniques, making it an essential tool for machine learning projects requiring data balancing.
+**databoostr** is a Python package designed for AI developers to automatically analyze and augment datasets when data is scarce. It supports both **image** and **text** augmentation techniques, making it an essential tool for machine learning projects requiring data balancing.
 
 ---
 
